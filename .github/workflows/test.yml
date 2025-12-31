@@ -54,5 +54,6 @@ jobs:
           php artisan migrate --force
 
       - name: Run tests
+        working-directory: deploy
         run: ./vendor/bin/phpunit --colors=always
 
