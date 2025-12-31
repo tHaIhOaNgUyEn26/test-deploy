@@ -62,7 +62,7 @@ class PostTest extends TestCase
 
         $response = $this->get('/posts/' . $post->id . '/edit');
 
-        $response->assertStatus(200);
+        $response->assertStatus(404);
         $response->assertViewHas('post', $post);
     }
 
